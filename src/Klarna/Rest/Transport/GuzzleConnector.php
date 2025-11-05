@@ -74,13 +74,13 @@ class GuzzleConnector implements ConnectorInterface
      * @param ClientInterface    $client       HTTP transport client
      * @param string             $merchantId   Merchant ID
      * @param string             $sharedSecret Shared secret
-     * @param UserAgentInterface $userAgent    HTTP user agent to identify the client
+     * @param UserAgentInterface|null $userAgent    HTTP user agent to identify the client
      */
     public function __construct(
         ClientInterface $client,
         $merchantId,
         $sharedSecret,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         $this->client = $client;
         $this->merchantId = $merchantId;
@@ -266,7 +266,7 @@ class GuzzleConnector implements ConnectorInterface
      * @param string             $merchantId   Merchant ID
      * @param string             $sharedSecret Shared secret
      * @param string             $baseUrl      Base URL for HTTP requests
-     * @param UserAgentInterface $userAgent    HTTP user agent to identify the client
+     * @param UserAgentInterface|null $userAgent    HTTP user agent to identify the client
      *
      * @return self
      */
@@ -274,7 +274,7 @@ class GuzzleConnector implements ConnectorInterface
         $merchantId,
         $sharedSecret,
         $baseUrl = self::EU_BASE_URL,
-        UserAgentInterface $userAgent = null
+        ?UserAgentInterface $userAgent = null
     ) {
         $client = new Client(['base_uri' => $baseUrl]);
 
