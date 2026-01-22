@@ -36,32 +36,12 @@ interface ConnectorInterface
     /**
      * API base URL for Europe.
      */
-    const EU_BASE_URL = 'https://api.kustom.co';
+    const BASE_URL = 'https://api.kustom.co';
 
     /**
      * Testing API base URL for Europe.
      */
-    const EU_TEST_BASE_URL = 'https://api.playground.kustom.co';
-
-    /**
-     * API base URL for North America.
-     */
-    const NA_BASE_URL = 'https://api.kustom.co';
-
-    /**
-     * Testing API base URL for North America.
-     */
-    const NA_TEST_BASE_URL = 'https://api.playground.kustom.co';
-
-    /**
-     * API base URL for Oceania.
-     */
-    const OC_BASE_URL = 'https://api.kustom.co';
-
-    /**
-     * Testing API base URL for Oceania.
-     */
-    const OC_TEST_BASE_URL = 'https://api.playground.kustom.co';
+    const TEST_BASE_URL = 'https://api.playground.kustom.co';
 
     /**
      * Sends HTTP GET request to specified path.
